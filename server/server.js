@@ -1,23 +1,29 @@
 const express = require("express");
-
 const { ApolloServer } = require("apollo-server-express");
 
+const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
 const models = require("./models");
-const routes = require("./routes");
+const path = require("path");
 
 const PORT = process.env.PORT || 3001;
-
-const server = new ApolloServer({
-  // typeDefs,
-  // resolvers
-});
-
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
+
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(routes);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+}
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 
 const startApolloServer = async () => {
   await server.start();
@@ -31,3 +37,5 @@ const startApolloServer = async () => {
     });
   });
 };
+
+startApolloServer(typeDefs, resolvers);

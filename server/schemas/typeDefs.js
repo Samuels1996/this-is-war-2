@@ -1,5 +1,59 @@
 const { gql } = require("apollo-server-express");
 
-const typeDefs = gql``;
+const typeDefs = gql`
+  type Character {
+    _id: ID!
+    name: String!
+    equipment: [Item]
+    level: Int
+    classType: String!
+    hp: Int
+    attack: Int
+    defense: Int
+    exp: Int
+    active: Boolean
+    boss: Boolean
+  }
+  type Level {
+    _id: ID!
+    level: Int
+    exp: Int
+    money: Int
+    hp: Int
+    attack: Int
+    defense: Int
+  }
+  type Item {
+    _id: ID!
+    category: String!
+    name: String!
+    description: String!
+    price: Int
+    hp: Int
+    attack: Int
+    defense: Int
+  }
+  type User {
+    _id: ID!
+    username: String!
+    email: String!
+    password: String!
+    wealth: Int
+    characters: [Character]
+    inventory: [Item]
+    wins: Int
+    loses: Int
+    online: Boolean
+  }
+  type Query {
+    users: [User]
+    user(_id: String): [User]
+    characters: [Character]
+    character(_id: String): [Character]
+    items: [Item]
+    item(_id: String): [Item]
+    level: [Level]
+  }
+`;
 
 module.exports = typeDefs;

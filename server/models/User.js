@@ -2,11 +2,7 @@ const { Schema, model, Types } = require("mongoose");
 const Character = require("./Character");
 const Item = require("./Item");
 const userSchema = new Schema({
-  id: {
-    type: Schema.Types.ObjectId,
-    default: () => new Types.ObjectId(),
-  },
-  userName: {
+  username: {
     type: String,
     required: true,
     trim: true,
@@ -48,6 +44,10 @@ const userSchema = new Schema({
   loses: {
     type: Number,
     default: 0,
+  },
+  online: {
+    type: Boolean,
+    default: false,
   },
 });
 
