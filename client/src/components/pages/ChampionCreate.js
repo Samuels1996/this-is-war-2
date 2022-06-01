@@ -1,11 +1,10 @@
-//directs to  fight
+//directs to champ select
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function FightChoose () {
+export default function CreateChampion () {
     return (
         <div>
-            <Link to='/fight'>Fight!</Link>
             <Link to='/championselect'>Champion Select</Link>
         </div>
     )
