@@ -8,5 +8,20 @@
     "inventory": [],
     "wins": "1000",
     "losses": "0"
+  },
+  {
+    "username": "Brian",
+    "email": "brian@thisiswar.com",
+    "password": "password1"
+  },
+  {
+    "username": "Mako",
+    "email": "mako@thisiswar.com",
+    "password": "password2"
+  },
+  {
+    "username": "Colin",
+    "email": "colin@thisiswar.com",
+    "password": "password4"
   }
 ]

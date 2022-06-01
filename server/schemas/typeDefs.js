@@ -14,6 +14,7 @@ const typeDefs = gql`
     active: Boolean
     boss: Boolean
   }
+
   type Level {
     _id: ID!
     level: Int
@@ -23,6 +24,7 @@ const typeDefs = gql`
     attack: Int
     defense: Int
   }
+
   type Item {
     _id: ID!
     category: String!
@@ -33,6 +35,7 @@ const typeDefs = gql`
     attack: Int
     defense: Int
   }
+
   type User {
     _id: ID!
     username: String!
@@ -45,6 +48,12 @@ const typeDefs = gql`
     loses: Int
     online: Boolean
   }
+
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query {
     users: [User]
     user(_id: String): [User]
@@ -53,6 +62,11 @@ const typeDefs = gql`
     items: [Item]
     item(_id: String): [Item]
     level: [Level]
+  }
+
+  type Mutation {
+    createUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
   }
 `;
 
