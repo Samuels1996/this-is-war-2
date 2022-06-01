@@ -1,0 +1,23 @@
+[
+    {
+        "username": "Brian",
+        "email": "brian@thisiswar.com",
+        "password": "password1"
+    },
+    {
+        "username": "Mako",
+        "email": "mako@thisiswar.com",
+        "password": "password2"
+    },
+    {
+        "username": "Jason",
+        "email": "jason@thisiswar.com",
+        "password": "password3"
+    },
+    {
+        "username": "Colin",
+        "email": "colin@thisiswar.com",
+        "password": "password4"
+    }
+  ]
+  
