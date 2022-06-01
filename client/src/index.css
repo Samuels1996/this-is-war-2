@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.login-background {
+  background-image: url('./images/campfire.gif');
+  height: 100vh;
+  padding: 0;
+}
