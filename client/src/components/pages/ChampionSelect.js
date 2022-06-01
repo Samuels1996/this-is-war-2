@@ -8,5 +8,8 @@ export default function ChampionSelect () {
             <Link to='/store'>Store</Link>
             <Link to='/fightchoice'>Choose Fight</Link>
         </div>
+
+        
     )
 }
+

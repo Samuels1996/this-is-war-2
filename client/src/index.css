@@ -17,3 +17,11 @@ code {
   height: 100vh;
   padding: 0;
 }
+
+.playerCards {
+  color: white;
+  border: 100px;
+  border-color: red;
+  border-radius: 25px;
+  padding: 1em;
+}
