@@ -1,0 +1,101 @@
+[
+  {
+    "category": "weapon",
+    "name": "Excalibur",
+    "description": "Only the chosen one may wield this legendary blade. *OP",
+    "price": "2000000",
+    "hp": "500",
+    "attack": "1000",
+    "defense": "0"
+  },
+  {
+    "category": "weapon",
+    "name": "Rum Ham",
+    "description": "A piece of a mystical beast soaked in cheap rum",
+    "price": "1000000",
+    "hp": "250",
+    "attack": "500",
+    "defense": "0"
+  },
+  {
+    "category": "weapon",
+    "name": "Iron Sword",
+    "description": "A typical Iron sword",
+    "price": "100",
+    "hp": "5",
+    "attack": "5",
+    "defense": "0"
+  },
+  {
+    "category": "weapon",
+    "name": "Silver Bow",
+    "description": "A bow made from fine silver",
+    "price": "300",
+    "hp": "3",
+    "attack": "7",
+    "defense": "0"
+  },
+  {
+    "category": "weapon",
+    "name": "Fire Staff",
+    "description": "A big wooden stick imbued with fire magic",
+    "price": "200",
+    "hp": "0",
+    "attack": "10",
+    "defense": "0"
+  },
+  {
+    "category": "weapon",
+    "name": "Iron Mace",
+    "description": "Made to hit someone very hard",
+    "price": "2000000",
+    "hp": "2",
+    "attack": "8",
+    "defense": "0"
+  },
+  {
+    "category": "armor",
+    "name": "The Dark Lord's Wings",
+    "description": "The Wings of a fallen angel. Powerful, Mystic, and Purell",
+    "price": "2000000",
+    "hp": "500",
+    "attack": "0",
+    "defense": "1000"
+  },
+  {
+    "category": "armor",
+    "name": "Forbidden Cloak",
+    "description": "A powerful cloak that many people have used for many atrocities and obscenities.",
+    "price": "1000000",
+    "hp": "250",
+    "attack": "0",
+    "defense": "500"
+  },
+  {
+    "category": "armor",
+    "name": "Gold Armor",
+    "description": "Armor crafted from a strong and valuable Gold Alloy",
+    "price": "5000",
+    "hp": "12",
+    "attack": "0",
+    "defense": "20"
+  },
+  {
+    "category": "armor",
+    "name": "Steel Armor",
+    "description": "If it is fit for the knights of the realm it is fit for you",
+    "price": "500",
+    "hp": "7",
+    "attack": "0",
+    "defense": "7"
+  },
+  {
+    "category": "armor",
+    "name": "Chain Mail",
+    "description": "Simple chain mail. You get what you pay for",
+    "price": "200",
+    "hp": "5",
+    "attack": "0",
+    "defense": "5"
+  }
+]
