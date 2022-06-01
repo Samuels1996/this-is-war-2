@@ -1,10 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Login, HomePage, Fight, FightChoose, ChampionSelect, CreateChampion, Store } from './components/pages'
+import './index.css'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App login-background">
       <Router>
         <h1>link navbar element here</h1>
 

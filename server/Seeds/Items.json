@@ -20,7 +20,7 @@
   {
     "category": "weapon",
     "name": "Iron Sword",
-    "description": "A typical Iron sword",
+    "description": "Crafted for centuries, this sword has won battles",
     "price": "100",
     "hp": "5",
     "attack": "5",
@@ -29,7 +29,7 @@
   {
     "category": "weapon",
     "name": "Silver Bow",
-    "description": "A bow made from fine silver",
+    "description": "A bow made from fine silver woven with the hair of elves",
     "price": "300",
     "hp": "3",
     "attack": "7",
@@ -47,7 +47,7 @@
   {
     "category": "weapon",
     "name": "Iron Mace",
-    "description": "Made to hit someone very hard",
+    "description": "To wield this mace is to be a true destroyer",
     "price": "2000000",
     "hp": "2",
     "attack": "8",
