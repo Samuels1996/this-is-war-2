@@ -1,0 +1,38 @@
+[
+  {
+    "name": "The Dark Lord",
+    "equipment": [],
+    "level": "5",
+    "classType": "Demon",
+    "hp": "250",
+    "attack": "50",
+    "defense": "40",
+    "exp": "0",
+    "active": false,
+    "boss": true
+  },
+  {
+    "name": "Baba Yaga",
+    "equipment": [],
+    "level": "1",
+    "classType": "Demon",
+    "hp": "75",
+    "attack": "10",
+    "defense": "10",
+    "exp": "0",
+    "active": false,
+    "boss": true
+  },
+  {
+    "name": "Apophis",
+    "equipment": [],
+    "level": "3",
+    "classType": "Snake",
+    "hp": "130",
+    "attack": "25",
+    "defense": "15",
+    "exp": "0",
+    "active": false,
+    "boss": true
+  }
+]

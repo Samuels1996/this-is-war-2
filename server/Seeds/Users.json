@@ -1,23 +1,27 @@
 [
-    {
-        "username": "Brian",
-        "email": "brian@thisiswar.com",
-        "password": "password1"
-    },
-    {
-        "username": "Mako",
-        "email": "mako@thisiswar.com",
-        "password": "password2"
-    },
-    {
-        "username": "Jason",
-        "email": "jason@thisiswar.com",
-        "password": "password3"
-    },
-    {
-        "username": "Colin",
-        "email": "colin@thisiswar.com",
-        "password": "password4"
-    }
-  ]
-  
+  {
+    "username": "jcouch5",
+    "email": "jasoncouchjr410@gmail.com",
+    "password": "Password123",
+    "wealth": "100000000",
+    "characters": [],
+    "inventory": [],
+    "wins": "1000",
+    "losses": "0"
+  },
+  {
+    "username": "Brian",
+    "email": "brian@thisiswar.com",
+    "password": "password1"
+  },
+  {
+    "username": "Mako",
+    "email": "mako@thisiswar.com",
+    "password": "password2"
+  },
+  {
+    "username": "Colin",
+    "email": "colin@thisiswar.com",
+    "password": "password4"
+  }
+]
