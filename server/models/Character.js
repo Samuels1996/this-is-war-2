@@ -27,11 +27,11 @@ const characterSchema = new Schema({
   },
   attack: {
     type: Number,
-    default: 25,
+    default: 10,
   },
   defense: {
     type: Number,
-    default: 25,
+    default: 10,
   },
   exp: {
     type: Number,

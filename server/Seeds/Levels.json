@@ -1,0 +1,74 @@
+[
+  {
+    "level": "2",
+    "exp": "1000",
+    "money": "500",
+    "hp": "10",
+    "attack": "10",
+    "defense": "10"
+  },
+  {
+    "level": "3",
+    "exp": "3000",
+    "money": "500",
+    "hp": "10",
+    "attack": "10",
+    "defense": "10"
+  },
+  {
+    "level": "4",
+    "exp": "6000",
+    "money": "500",
+    "hp": "10",
+    "attack": "10",
+    "defense": "10"
+  },
+  {
+    "level": "5",
+    "exp": "10000",
+    "money": "1000",
+    "hp": "10",
+    "attack": "10",
+    "defense": "10"
+  },
+  {
+    "level": "6",
+    "exp": "15000",
+    "money": "1000",
+    "hp": "10",
+    "attack": "10",
+    "defense": "10"
+  },
+  {
+    "level": "7",
+    "exp": "21000",
+    "money": "1000",
+    "hp": "10",
+    "attack": "10",
+    "defense": "10"
+  },
+  {
+    "level": "8",
+    "exp": "27000",
+    "money": "1000",
+    "hp": "10",
+    "attack": "10",
+    "defense": "10"
+  },
+  {
+    "level": "9",
+    "exp": "33000",
+    "money": "1000",
+    "hp": "10",
+    "attack": "10",
+    "defense": "10"
+  },
+  {
+    "level": "10",
+    "exp": "40000",
+    "money": "1000",
+    "hp": "15",
+    "attack": "15",
+    "defense": "15"
+  }
+]
