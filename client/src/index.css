@@ -13,13 +13,20 @@ code {
 }
 
 .logoImg {
-  height: 4rem;
-  width: 6rem;
+  height: 4em;
+  width: 6em;
+  margin-left: 1em;
 }
 
 @font-face {
   font-family: "Alkhemikal";
   src: url("./font/Alkhemikal.ttf");
+}
+
+.navbar-link-main {
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
+  color: crimson !important;
 }
 
 .login-background {
