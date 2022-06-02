@@ -18,7 +18,10 @@ import {
   ChampionSelect,
   CreateChampion,
   Store,
+  TestPage,
 } from "./components/pages";
+
+import background from "./images/brick-bg.png";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -43,22 +46,25 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <>
-          <h1>Link navbar element here</h1>
+      <div class="site-bg" style={{ backgroundImage: `url(${background})` }}>
+        <Router>
+          <>
+            <h1>Link navbar element here</h1>
 
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/store" element={<Store />} />
-            <Route path="/championselect" element={<ChampionSelect />} />
-            <Route path="/fight" element={<Fight />} />
-            <Route path="/fightchoice" element={<FightChoose />} />
-            <Route path="/createchampion" element={<CreateChampion />} />
-          </Routes>
-        </>
-      </Router>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/store" element={<Store />} />
+              <Route path="/championselect" element={<ChampionSelect />} />
+              <Route path="/fight" element={<Fight />} />
+              <Route path="/fightchoice" element={<FightChoose />} />
+              <Route path="/createchampion" element={<CreateChampion />} />
+              <Route path="/testpage" element={<TestPage />} />
+            </Routes>
+          </>
+        </Router>
+      </div>
     </ApolloProvider>
   );
 }
