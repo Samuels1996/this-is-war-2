@@ -5,7 +5,7 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   Query: {
     users: async () => {
-      return User.findAll({});
+      return User.find({});
     },
     user: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
@@ -38,6 +38,7 @@ const resolvers = {
       return { token, user };
     },
     login: async (parent, { email, password }) => {
+      console.log(`Login route hit`);
       const user = await User.findOne({ email });
 
       if (!user) {
