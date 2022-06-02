@@ -8,7 +8,16 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import $ from "jquery";
+import Popper from "popper.js";
 
+// Styling imports
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.js";
+import "./App.css";
+import background from "./images/brick-bg.png";
+
+// Page imports
 import {
   Login,
   Signup,
@@ -21,14 +30,14 @@ import {
   TestPage,
 } from "./components/pages";
 
-import background from "./images/brick-bg.png";
-
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem("id_token");
+
+  console.log(token);
 
   return {
     headers: {
