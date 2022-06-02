@@ -19,10 +19,10 @@ const resolvers = {
       return Item.find(params);
     },
     level: async () => {
-      return Level.findAll({});
+      return Level.find({});
     },
     characters: async () => {
-      return Character.findAll({});
+      return Character.find({});
     },
     character: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
@@ -54,22 +54,15 @@ const resolvers = {
 
       return { token, user };
     },
+    createCharacter: async (parent, args) => {
+      const character = await Character.create(args);
+      return character;
+    },
+    // createItem: async (parent, args) => {
+    //   const item = await Item.create(args);
+    //   return item;
+    // },
   },
-
-  // Mutation: {
-  //   createUser: async (parent, args) => {
-  //     const user = await User.create(args);
-  //     return user;
-  //   },
-  //   createCharacter: async (parent, args) => {
-  //     const character = await Character.create(args);
-  //     return character;
-  //   },
-  //   createItem: async (parent, args) => {
-  //     const item = await Item.create(args);
-  //     return item;
-  //   },
-  // },
 };
 
 module.exports = resolvers;
