@@ -9,7 +9,7 @@ export default function HomePage() {
       <Link to="/login">Login</Link>
       <Link to="/signup">Signup</Link>
       <Link to="/testpage">
-        <h3 class="text-light">TEST PAGE</h3>
+        <h3 className="text-light">TEST PAGE</h3>
       </Link>
     </div>
   );
