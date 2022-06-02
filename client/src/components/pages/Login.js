@@ -115,6 +115,9 @@ const Login = () => {
           <Signup />
         </Col>
       </Row>
+      <Link to="/">
+        <h3>Home page</h3>
+      </Link>
     </Container>
   );
 };
