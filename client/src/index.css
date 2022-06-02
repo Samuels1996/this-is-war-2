@@ -26,7 +26,7 @@ code {
 .navbar-link-main {
   font-family: "Alkhemikal";
   src: url("./font/Alkhemikal.ttf");
-  color: crimson !important;
+  color: #860000 !important;
 }
 
 .login-background {
