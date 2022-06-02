@@ -2,15 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../../index.css'
 
-<<<<<<< HEAD
-export default function HomePage () {
-    return (
-        <div>
-            <Link to='/login'>Login</Link>
-        </div>
-    )
-}
-=======
 export default function HomePage() {
   return (
     <div>
@@ -20,4 +11,3 @@ export default function HomePage() {
     </div>
   );
 }
->>>>>>> 3be4d4a40f926f6aefaf44003b293bf10daad09f

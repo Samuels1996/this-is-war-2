@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { QUERY_ITEMS } from "../../utils/queries";
 import StoreList from '../StoreList';
 
-<<<<<<< HEAD
 export default function Store () {
     const { loading, data } = useQuery(QUERY_ITEMS)
     const items = data?.items || [];
@@ -24,12 +23,3 @@ export default function Store () {
         </div>
     )
 }
-=======
-export default function Store() {
-  return (
-    <div>
-      <Link to="/championselect">Select Champion</Link>
-    </div>
-  );
-}
->>>>>>> 3be4d4a40f926f6aefaf44003b293bf10daad09f
