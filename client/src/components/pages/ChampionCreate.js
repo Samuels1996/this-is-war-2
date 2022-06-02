@@ -7,6 +7,11 @@ export default function CreateChampion() {
   const changeType = (str) => {
     setCharType(str);
   };
+  const [show, setShow] = useState(false);
+  const menuClass = `dropdown-menu ${show ? " show" : ""}`;
+  const changeshow = (boo) => {
+    setShow(boo);
+  };
   return (
     <div>
       <div>
@@ -25,15 +30,19 @@ export default function CreateChampion() {
               id="dropdownMenuLink"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+              onClick={() => changeshow(!show)}
             >
               {charType}
             </a>
 
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <ul className={menuClass} aria-labelledby="dropdownMenuLink">
               <li>
                 <button
                   className="dropdown-item"
-                  onClick={() => changeType("Action")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    changeType("Action");
+                  }}
                 >
                   Action
                 </button>
