@@ -7,12 +7,17 @@
     "characters": [],
     "inventory": [],
     "wins": "1000",
-    "losses": "0"
+    "losses": "1"
   },
   {
     "username": "Brian",
     "email": "brian@thisiswar.com",
-    "password": "password1"
+    "password": "password1",
+    "wealth": "1000000000",
+    "characters": [],
+    "inventory": [],
+    "wins": "1001",
+    "losses": "0"
   },
   {
     "username": "Mako",
