@@ -18,6 +18,12 @@ code {
   margin-left: 1em;
 }
 
+.item-card {
+  width: 18em;
+  margin: 1em;
+  min-width: 18em;
+}
+
 @font-face {
   font-family: "Alkhemikal";
   src: url("./font/Alkhemikal.ttf");
@@ -41,4 +47,19 @@ code {
   border-color: red;
   border-radius: 25px;
   padding: 1em;
+}
+
+.fightOptions {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid black;
+
+  background-color: #860000;
+
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+
+  cursor: pointer;
 }
