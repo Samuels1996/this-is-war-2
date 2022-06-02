@@ -15,7 +15,7 @@ db.once("open", async () => {
 
     const items = await Item.insertMany(itemsData);
     const characters = await Character.insertMany(characterData);
-    const user = await User.insertMany(userData);
+    const user = await User.create(userData);
     const levels = await Level.insertMany(levelData);
   } catch (err) {
     console.log(err);

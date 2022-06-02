@@ -54,7 +54,7 @@ function App() {
             <Route path="/store" element={<Store />} />
             <Route path="/championselect" element={<ChampionSelect />} />
             <Route path="/fight" element={<Fight />} />
-            <Route path="/fightChoice" element={<FightChoose />} />
+            <Route path="/fightchoice" element={<FightChoose />} />
             <Route path="/createchampion" element={<CreateChampion />} />
           </Routes>
         </>
