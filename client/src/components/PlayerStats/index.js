@@ -4,7 +4,7 @@ import { FIND_USERS } from "../utils/queries";
 import { Health } from '../Health';
 
 
-export const PlayerStats = ({ boss }) => {
+export const PlayerStats = ({}) => {
     return <div>
         <div>This is player stuff</div>
         <div>
@@ -13,3 +13,12 @@ export const PlayerStats = ({ boss }) => {
 
     </div>;
 };
+
+export const OpponentStats = ({}) => {
+    return <div>
+        <div>This is opponent info</div>
+        <div>
+            <Health label="HP:" />
+        </div>
+    </div>
+}
