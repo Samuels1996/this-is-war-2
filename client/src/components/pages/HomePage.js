@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../index.css";
+import AuthService from "../../utils/auth";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,9 @@ export default function HomePage() {
       <Link to="/testpage">
         <h3 class="text-light">TEST PAGE</h3>
       </Link>
+      <div class="text-light">
+        {AuthService.loggedIn() ? `LOGGED IN` : `LOG IN SUCKER`}
+      </div>
     </div>
   );
 }

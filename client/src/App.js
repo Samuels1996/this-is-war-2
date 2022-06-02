@@ -8,8 +8,16 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import "./App.css";
+import $ from "jquery";
+import Popper from "popper.js";
 
+// Styling imports
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.js";
+import "./App.css";
+import background from "./images/brick-bg.png";
+
+// Page imports
 import {
   Login,
   Signup,
@@ -21,12 +29,6 @@ import {
   Store,
   TestPage,
 } from "./components/pages";
-import "./index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.js";
-import $ from "jquery";
-import Popper from "popper.js";
-import background from "./images/brick-bg.png";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -34,6 +36,8 @@ const httpLink = createHttpLink({
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem("id_token");
+
+  console.log(token);
 
   return {
     headers: {
@@ -52,7 +56,10 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div class="site-bg" style={{ backgroundImage: `url(${background})` }}>
+        <div
+          className="site-bg"
+          style={{ backgroundImage: `url(${background})` }}
+        >
           <>
             <Navbar />
 
