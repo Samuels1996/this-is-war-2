@@ -6,19 +6,21 @@ import { QUERY_ITEMS } from "../../utils/queries";
 import StoreList from '../StoreList';
 
 export default function Store () {
-    const { loading, data } = useQuery(QUERY_ITEMS)
-    const items = data?.items || [];
+    const { loading, error, data } = useQuery(QUERY_ITEMS)
+    const item = data?.item || [];
+
+
     return (
         <div>
             <Link to='/championselect'>Select Champion</Link>
             <div className="col-12">
                 {loading ? (
                     <div>Loading...</div>
-                ) : (
+                ) :  error ? (<div>{error.message}</div>) :
+                 (
                     <StoreList
-                    items={items} />
+                    item={item} />
                 )}
-                <p>hewwo</p>
             </div>
         </div>
     )

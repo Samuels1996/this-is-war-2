@@ -12,7 +12,7 @@ const resolvers = {
       return User.find(params);
     },
     items: async () => {
-      return Item.findAll({});
+      return Item.find({});
     },
     item: async (parent, { _id }) => {
       const params = _id ? { _id } : {};

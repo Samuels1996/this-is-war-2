@@ -52,7 +52,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div class="site-bg" style={{ backgroundImage: `url(${background})` }}>
+        <div className="site-bg" style={{ backgroundImage: `url(${background})` }}>
           <>
             <Navbar />
 
