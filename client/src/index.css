@@ -42,3 +42,18 @@ code {
   border-radius: 25px;
   padding: 1em;
 }
+
+.fightOptions {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid black;
+
+  background-color: #860000;
+
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+
+  cursor: pointer;
+}
