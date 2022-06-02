@@ -52,8 +52,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <>
-          <Navbar />
+        <div class="site-bg" style={{ backgroundImage: `url(${background})` }}>
+          <>
+            <Navbar />
 
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -67,7 +68,8 @@ function App() {
               <Route path="/testpage" element={<TestPage />} />
             </Routes>
           </>
-        </Router>
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
