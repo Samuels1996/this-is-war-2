@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import {
   ApolloClient,
   InMemoryCache,
@@ -20,7 +21,11 @@ import {
   Store,
   TestPage,
 } from "./components/pages";
-
+import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.js";
+import $ from "jquery";
+import Popper from "popper.js";
 import background from "./images/brick-bg.png";
 
 const httpLink = createHttpLink({
@@ -46,10 +51,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div class="site-bg" style={{ backgroundImage: `url(${background})` }}>
-        <Router>
-          <>
-            <h1>Link navbar element here</h1>
+      <Router>
+        <>
+          <Navbar />
 
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -64,7 +68,6 @@ function App() {
             </Routes>
           </>
         </Router>
-      </div>
     </ApolloProvider>
   );
 }
