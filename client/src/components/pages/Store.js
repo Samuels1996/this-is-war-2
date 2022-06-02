@@ -2,12 +2,12 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
-import { QUERY_ITEMS } from "../../utils/queries";
-import StoreList from '../StoreList';
+// import StoreList from '../StoreList';
+import { FIND_ITEMS } from "../utils/queries";
 
 export default function Store () {
-    const { loading, error, data } = useQuery(QUERY_ITEMS)
-    const item = data?.item || [];
+    const { loading, data } = useQuery(FIND_ITEMS)
+    const item = data?.items || [];
 
 
     return (
@@ -16,10 +16,22 @@ export default function Store () {
             <div className="col-12">
                 {loading ? (
                     <div>Loading...</div>
-                ) :  error ? (<div>{error.message}</div>) :
+                ) :
                  (
-                    <StoreList
-                    item={item} />
+                   <div className="card-group">
+                    {item.map((item) => {
+                      return <div key={item._id} className="card mb-2 item-card">
+                        <h3 className="card-header">{item.name}</h3>
+                        <p className="card-text">{item.description} <br />
+                        {item.price} gold <br />
+                        +{item.hp} hp <br />
+                        +{item.attack} atk <br />
+                        +{item.defense} def <br />
+                        </p>
+                        
+                      </div>
+                    })}
+                    </div>
                 )}
             </div>
         </div>
