@@ -52,16 +52,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-<<<<<<< HEAD
       <Router>
         <>
           <Navbar />
-=======
-      <div class="site-bg" style={{ backgroundImage: `url(${background})` }}>
-        <Router>
-          <>
-            <h1>Link navbar element here</h1>
->>>>>>> a2a53d812f6380dd3030f5c2cbfee2d82a21dcb2
 
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -76,7 +69,6 @@ function App() {
             </Routes>
           </>
         </Router>
-      </div>
     </ApolloProvider>
   );
 }
