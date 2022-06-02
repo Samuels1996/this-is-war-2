@@ -9,7 +9,7 @@ export default function Fight() {
     return ( 
         <div>
             <Link to='/fightchoice'>Choose Fight</Link>
-            <div className="playerCards">Fight!</div>
+            <div className="fightCard">Fight!</div>
             <div className="playerCards">
                 <PlayerStats />
             </div>

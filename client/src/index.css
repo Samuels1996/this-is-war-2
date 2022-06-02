@@ -47,19 +47,34 @@ code {
   border-color: red;
   border-radius: 25px;
   padding: 1em;
+  font-size: 30px;
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
 }
 
 .fightOptions {
   display: flex;
   border-radius: 5px;
   border: 1px solid black;
-
+  padding: 10px;
   background-color: #860000;
 
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 24px;
+  font-size: 40px;
 
   cursor: pointer;
+}
+
+.fightCard {
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
+  font-size: 75px;
+  color: #860000;
+  text-align: center;
+}
+
+.navText {
+  font-size: 25px;
 }

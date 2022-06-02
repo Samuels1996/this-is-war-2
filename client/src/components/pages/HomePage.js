@@ -5,7 +5,7 @@ import AuthService from "../../utils/auth";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className='login-background'>
       <h1>IT WORK</h1>
       <Link to="/login">Login</Link>
       <Link to="/testpage">
