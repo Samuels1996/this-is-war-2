@@ -1,20 +1,19 @@
 import { gql } from '@apollo/client';
 
-<<<<<<< HEAD
 export const ITEM_QUERY = gql`
     query getItems {
-        Item {
-            _id: ID!
-            category: String!
-            name: String!
-            description: String!
-            price: Int
-            hp: Int
-            attack: Int
-            defense: Int
+        items {
+            _id
+            category
+            name
+            description
+            price
+            hp
+            attack
+            defense
           }
     }`;
-=======
+
 export const QUERY_USERS = gql`
     query allUsers {
         users {
@@ -31,4 +30,3 @@ export const QUERY_USERS = gql`
         }
     }
 `;
->>>>>>> f73b74cfa1fe871643ee4609a2fa5a1be078685b

@@ -12,6 +12,16 @@ code {
     monospace;
 }
 
+.logoImg {
+  height: 4rem;
+  width: 6rem;
+}
+
+@font-face {
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
+}
+
 .login-background {
   background-image: url('./images/campfire.gif');
   height: 100vh;
