@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../../index.css'
+import "../../index.css";
 
 export default function HomePage() {
   return (
@@ -8,6 +8,9 @@ export default function HomePage() {
       <h1>IT WORK</h1>
       <Link to="/login">Login</Link>
       <Link to="/signup">Signup</Link>
+      <Link to="/testpage">
+        <h3 class="text-light">TEST PAGE</h3>
+      </Link>
     </div>
   );
 }
