@@ -31,7 +31,9 @@
 .site-bg {
   min-height: 100vh;
 }
-
+.show {
+  display: block;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
