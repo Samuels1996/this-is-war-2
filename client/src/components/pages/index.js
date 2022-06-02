@@ -3,7 +3,17 @@ import ChampionSelect from "./ChampionSelect";
 import Fight from "./Fight";
 import HomePage from "./HomePage";
 import Login from "./Login";
+import Signup from "./Signup";
 import Store from "./Store";
 import FightChoose from "./FightChoose";
 
-export { CreateChampion, ChampionSelect, Fight, HomePage, Login, Store, FightChoose }
+export {
+  CreateChampion,
+  ChampionSelect,
+  Fight,
+  HomePage,
+  Login,
+  Signup,
+  Store,
+  FightChoose,
+};
