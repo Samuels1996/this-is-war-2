@@ -1,12 +1,14 @@
 const { Schema, model, Types } = require("mongoose");
 
 const levelSchema = new Schema({
-  level: Number,
-  exp: Number,
-  money: Number,
-  hp: Number,
-  attack: Number,
-  defense: Number,
+  level: {
+    type: Number,
+  },
+  exp: { type: Number },
+  money: { type: Number },
+  hp: { type: Number },
+  attack: { type: Number },
+  defense: { type: Number },
 });
 
 const Level = model("Level", levelSchema);
