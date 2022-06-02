@@ -14,3 +14,13 @@ export const FIND_ITEMS = gql`
     }
   }
 `;
+
+export const QUERY_USERS = gql`
+  query allUsers {
+    users {
+      _id
+      email
+      password
+    }
+  }
+`;
