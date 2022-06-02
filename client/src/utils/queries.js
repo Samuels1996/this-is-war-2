@@ -16,6 +16,7 @@ export const QUERY_USERS = gql`
     }
   }
 `;
+
 export const QUERY_ITEMS = gql`
   query allItems {
     items {

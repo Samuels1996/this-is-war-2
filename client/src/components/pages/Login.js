@@ -5,9 +5,9 @@ import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import { useMutation } from "@apollo/client";
-import { LOGIN_USER } from "../utils/mutations";
+import { LOGIN_USER } from "../../utils/mutations";
 
-import Auth from "../utils/auth";
+import Auth from "../../utils/auth";
 
 import Signup from "./Signup";
 
@@ -82,7 +82,7 @@ const Login = () => {
                   value={userData.email}
                   required
                 />
-                <Form.Control.Feedback type="iånvalid">
+                <Form.Control.Feedback type="invalid">
                   Email is required!
                 </Form.Control.Feedback>
               </Form.Group>
