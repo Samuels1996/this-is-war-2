@@ -113,3 +113,15 @@ code {
 
   transition: 0.35s;
 }
+
+.fightTextBox {
+  text-align: right;
+}
+
+.opponentImg {
+  background-image: url('./images/dungeon-boss.png');
+}
+
+.playerImg {
+  background-image: url('./images/megaman-thing.png');
+}
