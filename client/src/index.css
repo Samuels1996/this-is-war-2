@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,10 +17,10 @@ code {
     monospace;
 }
 
-.logoImg {
-  height: 4em;
-  width: 6em;
-  margin-left: 1em;
+.main-logo {
+ max-width: 80%;
+ margin-left: 12% !important;
+ margin-right: auto !important;
 }
 
 .item-card {
@@ -24,21 +29,25 @@ code {
   min-width: 18em;
 }
 
-@font-face {
-  font-family: "Alkhemikal";
-  src: url("./font/Alkhemikal.ttf");
+.no-link {
+  text-decoration: none;
+  color: white;
+}
+.no-link:hover{
+  color:#860000;
 }
 
 .navbar-link-main {
   font-family: "Alkhemikal";
   src: url("./font/Alkhemikal.ttf");
-  color: #860000 !important;
+  font-size: 30px !important;
 }
 
-.login-background {
-  background-image: url('./images/campfire.gif');
-  height: 100vh;
-  padding: 0;
+.main-style {
+  font-family: "Alkhemikal";
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
+  margin-top: 5rem;
 }
 
 .playerCards {
@@ -67,16 +76,16 @@ code {
   cursor: pointer;
 }
 
-.fightCard {
-  font-family: "Alkhemikal";
-  src: url("./font/Alkhemikal.ttf");
-  font-size: 75px;
-  color: #860000;
-  text-align: center;
+.form-row {
+  background: rgba(245, 245, 245, 0.6);
+  border: black;
+  border-style: solid;
+  height: 70%;
 }
 
-.navText {
-  font-size: 25px;
+.form-header {
+  color:#860000;
+  text-decoration: underline;
 }
 
 .main {
@@ -124,4 +133,17 @@ code {
 
 .playerImg {
   background-image: url('./images/megaman-thing.png');
+
+.form-style {
+  padding: 7rem;
+  font-size: 150%;
+  color: black;
+}
+
+.form-btn {
+  margin-top: 2rem;
+}
+
+.btn-text {
+  font-size: 150%;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/MainNav";
 import {
   ApolloClient,
   InMemoryCache,
@@ -66,7 +66,6 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
               <Route path="/store" element={<Store />} />
               <Route path="/championselect" element={<ChampionSelect />} />
               <Route path="/fight" element={<Fight />} />
