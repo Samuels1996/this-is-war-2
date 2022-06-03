@@ -21,6 +21,8 @@ code {
  max-width: 80%;
  margin-left: 12% !important;
  margin-right: auto !important;
+ margin-top: 15vh;
+ margin-bottom: 4rem;
 }
 
 .item-card {

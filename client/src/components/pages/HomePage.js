@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../index.css";
 import AuthService from "../../utils/auth";
-import mainLogo from "../../images/main-logo.svg";
+import mainLogo from "../../images/main-logo.png";
 import "../Button/Button.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
 
