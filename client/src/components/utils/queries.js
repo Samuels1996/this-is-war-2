@@ -15,12 +15,19 @@ export const FIND_ITEMS = gql`
   }
 `;
 
-export const QUERY_USERS = gql`
+export const FIND_USERS = gql`
   query allUsers {
     users {
       _id
+      username
       email
       password
+      wealth
+      characters
+      inventory
+      wins
+      loses
+      online
     }
   }
 `;

@@ -56,19 +56,22 @@ code {
   border-color: red;
   border-radius: 25px;
   padding: 1em;
+  font-size: 30px;
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
 }
 
 .fightOptions {
   display: flex;
   border-radius: 5px;
   border: 1px solid black;
-
+  padding: 10px;
   background-color: #860000;
 
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 24px;
+  font-size: 40px;
 
   cursor: pointer;
 }
@@ -85,6 +88,53 @@ code {
   text-decoration: underline;
 }
 
+.main {
+  display: flex;
+  border-radius: 5px;
+  gap: 5px;
+  padding: 5px;
+  align-items: center;
+  background-color: black;
+}
+
+.label {
+  font-size: 32px;
+  font-weight: bold;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50px;
+  color: white;
+}
+
+.max {
+  height: 35px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex: 1;
+  background-color: lightgray;
+}
+.health {
+  height: 100%;
+  background-color: red;
+
+  transition: 0.35s;
+}
+
+.fightTextBox {
+  text-align: right;
+}
+
+.opponentImg {
+  background-image: url('./images/dungeon-boss.png');
+}
+
+.playerImg {
+  background-image: url('./images/megaman-thing.png');
+}
+
 .form-style {
   padding: 7rem;
   font-size: 150%;
@@ -97,4 +147,12 @@ code {
 
 .btn-text {
   font-size: 150%;
+}
+
+.fightCard {
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
 }
