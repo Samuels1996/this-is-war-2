@@ -63,6 +63,12 @@ const resolvers = {
     //   const item = await Item.create(args);
     //   return item;
     // },
+    addCharacterToUser: async (parent, args) => {
+      const character = args.character;
+      const userId = args.userId;
+      const user = User.find({ userId }).populate(character).exec();
+      return user;
+    },
   },
 };
 

@@ -24,3 +24,27 @@ export const CREATE_USER = gql`
     }
   }
 `;
+
+export const CREATE_CHARACTER = gql`
+  mutation createCharacter($name: String!, $classType: String!) {
+    createCharacter(name: $name, classType: $classType) {
+      character {
+        name
+        classType
+      }
+    }
+  }
+`;
+
+export const ADD_CHARACTER_TO_USER = gql`
+  mutation addCharacterToUser($userId: ID!, $character: character) {
+    addCharacterToUser(userId: $userId, character: $character) {
+      user {
+        userId
+        characters {
+          character
+        }
+      }
+    }
+  }
+`;

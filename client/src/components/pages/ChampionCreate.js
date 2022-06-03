@@ -1,40 +1,63 @@
 //directs to champ select
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ADD_CHARACTER_TO_USER } from "../../utils/mutations";
+import { useMutation } from "@apollo/client";
+import AuthService from "../../utils/auth";
+import { useEffect } from "react";
 
-export default function CreateChampion() {
-  const [character, setCharacter] = useState({
-    name: null,
-    classType: null,
-  });
-  const [charType, setCharType] = useState("Select type");
+export default async function CreateChampion() {
+  // const [character, setCharacter] = useState({
+  //   name: "",
+  //   classType: "",
+  // });
+  // const [charType, setCharType] = useState("Select type");
   const changeType = (str) => {
-    setCharType(str);
+    // setCharType(str);
   };
-  const [show, setShow] = useState(false);
-  const menuClass = `dropdown-menu ${show ? " show" : ""}`;
+  // const [show, setShow] = useState(false);
+  // const menuClass = `dropdown-menu ${show ? " show" : ""}`;
   const changeshow = (boo) => {
-    setShow(boo);
+    // setShow(boo);
   };
-  const handleSubmit = () => {
+  // const [user, { error }] = useMutation(ADD_CHARACTER_TO_USER);
+  const handleSubmit = async () => {
     const name = document.getElementById("name").value.trim();
-    setCharacter({
-      name: name,
-      classType: charType,
-    });
+    // setCharacter({
+    //   name: name,
+    //   classType: charType,
+    // });
+    // setCharacter({
+    //   name: null,
+    //   classType: null,
+    // });
+    // const userId = AuthService.getProfile().data._id;
+    // console.log(userId);
+    // await user(userId, character);
+    // setCharType("Select type");
+    document.getElementById("name").value = "";
+  };
+  const characterImg = () => {
+    // if (charType === "Wizard") {
+    //   return <img src="" alt="Wizard Avatar" />;
+    // } else if (charType === "Archer") {
+    //   return <img src="" alt="Archer Avatar" />;
+    // } else {
+    //   return <img src="" alt="Warrior Avatar" />;
+    // }
   };
   return (
-    <div>
+    <div className="row">
       <div>
         <Link to="/championselect">Champion Select</Link>
       </div>
-      <div>
+      <div className="char">
         <h2>Character Creation</h2>
-        <form action="">
+        <form action="" className="">
           <label htmlFor="">Name</label>
           <input type="text" placeholder="Character Name" id="name" />
-          <div className="dropdown">
-            <a
+          <div className="dropdown my-2">
+            {/* <a
               className="btn btn-secondary dropdown-toggle"
               href="#"
               role="button"
@@ -44,9 +67,9 @@ export default function CreateChampion() {
               onClick={() => changeshow(!show)}
             >
               {charType}
-            </a>
+            </a> */}
 
-            <ul className={menuClass} aria-labelledby="dropdownMenuLink">
+            <ul aria-labelledby="dropdownMenuLink">
               <li>
                 <button
                   className="dropdown-item"
@@ -83,7 +106,7 @@ export default function CreateChampion() {
             </ul>
           </div>
           <button
-            className="bg-primary"
+            className="btn btn-primary"
             onClick={(e) => {
               e.preventDefault();
               handleSubmit();
@@ -93,6 +116,7 @@ export default function CreateChampion() {
           </button>
         </form>
       </div>
+      <div>{characterImg()}</div>
     </div>
   );
 }

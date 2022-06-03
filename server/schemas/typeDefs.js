@@ -14,7 +14,19 @@ const typeDefs = gql`
     active: Boolean
     boss: Boolean
   }
-
+  input CharacterInput {
+    _id: ID!
+    name: String!
+    equipment: [ItemInput]
+    level: Int
+    classType: String!
+    hp: Int
+    attack: Int
+    defense: Int
+    exp: Int
+    active: Boolean
+    boss: Boolean
+  }
   type Level {
     _id: ID!
     level: Int
@@ -35,7 +47,16 @@ const typeDefs = gql`
     attack: Int
     defense: Int
   }
-
+  input ItemInput {
+    _id: ID!
+    category: String!
+    name: String!
+    description: String!
+    price: Int
+    hp: Int
+    attack: Int
+    defense: Int
+  }
   type User {
     _id: ID!
     username: String!
@@ -68,6 +89,7 @@ const typeDefs = gql`
     createUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     createCharacter(name: String!, classType: String!): Character
+    addCharacterToUser(userId: ID!, character: CharacterInput!): User
   }
 `;
 
