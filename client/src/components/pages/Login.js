@@ -2,12 +2,11 @@
 import React, { useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
 import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 
-import Auth from "../../utils/auth";
+import AuthService from "../../utils/auth";
 
 import Signup from "./Signup";
 
@@ -46,7 +45,8 @@ const Login = () => {
       });
 
       console.log(data);
-      Auth.login(data.login.token);
+      AuthService.login(data.login.token);
+      console.log(AuthService.login(data.login.token));
     } catch (err) {
       console.log(err);
     }
@@ -59,19 +59,25 @@ const Login = () => {
   };
 
   return (
-    <Container>
-      <Row>
+    <Container className="main-style">
+      <Row className="form-row">
         <Col lg={6}>
           <>
-            <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+            <Form
+              noValidate
+              validated={validated}
+              onSubmit={handleFormSubmit}
+              className="form-style"
+            >
               <Alert
                 dismissible
                 onClose={() => setShowAlert(false)}
                 show={showAlert}
                 variant="danger"
               >
-                Something went wrong with your login credentials!
+                Double check your credentials are correct!
               </Alert>
+              <h1 className="form-header">Log in below:</h1>
               <Form.Group>
                 <Form.Label htmlFor="email">Email</Form.Label>
                 <Form.Control
@@ -104,9 +110,10 @@ const Login = () => {
               <Button
                 disabled={!(userData.email && userData.password)}
                 type="submit"
-                variant="success"
+                variant="dark"
+                className="form-btn"
               >
-                Submit
+                <span className="btn-text">Log in</span>
               </Button>
             </Form>
           </>
@@ -115,9 +122,6 @@ const Login = () => {
           <Signup />
         </Col>
       </Row>
-      <Link to="/">
-        <h3>Home page</h3>
-      </Link>
     </Container>
   );
 };

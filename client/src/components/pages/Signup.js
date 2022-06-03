@@ -6,7 +6,7 @@ import { Form, Button, Alert } from "react-bootstrap";
 import { useMutation } from "@apollo/client";
 import { CREATE_USER } from "../../utils/mutations";
 
-import Auth from "../../utils/auth";
+import AuthService from "../../utils/auth";
 
 const Signup = () => {
   const [userData, setUserData] = useState({
@@ -47,7 +47,7 @@ const Signup = () => {
       });
 
       console.log(data);
-      Auth.login(data.createUser.token);
+      AuthService.newLogin(data.createUser.token);
     } catch (err) {
       console.log(err);
     }
@@ -63,7 +63,12 @@ const Signup = () => {
   return (
     <>
       {/* This is needed for the validation functionality above */}
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+      <Form
+        noValidate
+        validated={validated}
+        onSubmit={handleFormSubmit}
+        className="form-style"
+      >
         {/* show alert if server response is bad */}
         <Alert
           dismissible
@@ -71,9 +76,11 @@ const Signup = () => {
           show={showAlert}
           variant="danger"
         >
-          Something went wrong with your signup!
+          Your username and/or email is already in use. Please log in if you
+          already have an account.
         </Alert>
 
+        <h1 className="form-header">Sign up below:</h1>
         <Form.Group>
           <Form.Label htmlFor="username">Username</Form.Label>
           <Form.Control
@@ -121,9 +128,10 @@ const Signup = () => {
         <Button
           disabled={!(userData.username && userData.email && userData.password)}
           type="submit"
-          variant="success"
+          variant="dark"
+          className="form-btn"
         >
-          Submit
+          <span className="btn-text">Register</span>
         </Button>
       </Form>
     </>
