@@ -1,16 +1,7 @@
 //directs to create champion and champ select
 import React, { useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
-import {
-  Container,
-  Row,
-  Col,
-  Form,
-  Button,
-  Alert,
-  Card,
-} from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
