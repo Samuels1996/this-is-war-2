@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function CreateChampion() {
+  const [character, setCharacter] = useState({
+    name: null,
+    classType: null,
+  });
   const [charType, setCharType] = useState("Select type");
   const changeType = (str) => {
     setCharType(str);
@@ -11,6 +15,13 @@ export default function CreateChampion() {
   const menuClass = `dropdown-menu ${show ? " show" : ""}`;
   const changeshow = (boo) => {
     setShow(boo);
+  };
+  const handleSubmit = () => {
+    const name = document.getElementById("name").value.trim();
+    setCharacter({
+      name: name,
+      classType: charType,
+    });
   };
   return (
     <div>
@@ -21,7 +32,7 @@ export default function CreateChampion() {
         <h2>Character Creation</h2>
         <form action="">
           <label htmlFor="">Name</label>
-          <input type="text" placeholder="Character Name" />
+          <input type="text" placeholder="Character Name" id="name" />
           <div className="dropdown">
             <a
               className="btn btn-secondary dropdown-toggle"
@@ -41,30 +52,45 @@ export default function CreateChampion() {
                   className="dropdown-item"
                   onClick={(e) => {
                     e.preventDefault();
-                    changeType("Action");
+                    changeType("Wizard");
                   }}
                 >
-                  Action
+                  Wizard
                 </button>
               </li>
               <li>
                 <button
                   className="dropdown-item"
-                  onClick={() => changeType("2")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    changeType("Archer");
+                  }}
                 >
-                  Another action
+                  Archer
                 </button>
               </li>
               <li>
                 <button
                   className="dropdown-item"
-                  onClick={() => changeType("3")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    changeType("Warrior");
+                  }}
                 >
-                  Something else here
+                  Warrior
                 </button>
               </li>
             </ul>
           </div>
+          <button
+            className="bg-primary"
+            onClick={(e) => {
+              e.preventDefault();
+              handleSubmit();
+            }}
+          >
+            submit
+          </button>
         </form>
       </div>
     </div>
