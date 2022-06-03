@@ -40,10 +40,6 @@
   font-size: 2rem;
 }
 
-.nav-bg{
-  background-image: url("./images/nav-bg.svg");
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

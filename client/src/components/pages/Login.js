@@ -60,7 +60,7 @@ const Login = () => {
 
   return (
     <Container className="main-style">
-      <Row className="form-row">
+      <Row>
         <Col lg={6}>
           <>
             <Form
