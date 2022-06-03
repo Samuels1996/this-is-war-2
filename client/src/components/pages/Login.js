@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 
-import Auth from "../../utils/auth";
+import AuthService from "../../utils/auth";
 
 import Signup from "./Signup";
 
@@ -46,7 +46,8 @@ const Login = () => {
       });
 
       console.log(data);
-      Auth.login(data.login.token);
+      AuthService.login(data.login.token);
+      console.log(AuthService.login(data.login.token));
     } catch (err) {
       console.log(err);
     }
@@ -59,7 +60,7 @@ const Login = () => {
   };
 
   return (
-    <Container>
+    <Container className="main-style">
       <Row>
         <Col lg={6}>
           <>
@@ -115,9 +116,6 @@ const Login = () => {
           <Signup />
         </Col>
       </Row>
-      <Link to="/">
-        <h3>Home page</h3>
-      </Link>
     </Container>
   );
 };

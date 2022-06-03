@@ -6,7 +6,7 @@ import { Form, Button, Alert } from "react-bootstrap";
 import { useMutation } from "@apollo/client";
 import { CREATE_USER } from "../../utils/mutations";
 
-import Auth from "../../utils/auth";
+import AuthService from "../../utils/auth";
 
 const Signup = () => {
   const [userData, setUserData] = useState({
@@ -47,7 +47,7 @@ const Signup = () => {
       });
 
       console.log(data);
-      Auth.login(data.createUser.token);
+      AuthService.newLogin(data.createUser.token);
     } catch (err) {
       console.log(err);
     }
