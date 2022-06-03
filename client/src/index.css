@@ -133,6 +133,7 @@ code {
 
 .playerImg {
   background-image: url('./images/megaman-thing.png');
+}
 
 .form-style {
   padding: 7rem;
@@ -146,4 +147,12 @@ code {
 
 .btn-text {
   font-size: 150%;
+}
+
+.fightCard {
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
 }

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FightOptions } from "../FightOptions";
 import  FightStuff  from "../Fight";
 import { OpponentStats, PlayerStats } from "../PlayerStats";
+import '../../index.css'
 
 export default function Fight() {
     return ( 
