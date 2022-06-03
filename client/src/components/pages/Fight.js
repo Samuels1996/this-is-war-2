@@ -1,6 +1,6 @@
 import React from "react";
 import { FightOptions } from "../FightOptions";
-import { OpponentStats, PlayerStats } from "../PlayerStats";
+import { PlayerStats, OpponentStats } from "../PlayerStats";
 import '../../index.css';
 import FightInit from '../hooks/FightInit'
 import OpponentMoves from "../hooks/OpponentMoves";
@@ -37,6 +37,7 @@ export default function Fight({onGameEnd}) {
     return (
       <>
         <div>
+          <div className="fightCard">Fight!</div>
           <div>
             <PlayerStats
               health={opponentHealth}
@@ -48,16 +49,14 @@ export default function Fight({onGameEnd}) {
         </div>
   
         <div>
-          <div>
+          {/* <div>
             {playerStats.name} vs {opponentStats.name}
-          </div>
-          <div>
-          </div>
+          </div> */}
         </div>
   
         
           <div>
-            <PlayerStats
+            <OpponentStats
               health={playerHealth}
               name={playerStats.name}
               level={playerStats.level}
@@ -66,14 +65,14 @@ export default function Fight({onGameEnd}) {
           </div>
   
           <div>
-            {!inSequence && turn === 0 && (
+            {/* {!inSequence && turn === 0 && ( */}
               <div>
                 <FightOptions
                   onDefend={() => setSequence({ mode: 'defend', turn })}
                   onAttack={() => setSequence({ mode: 'attack', turn })}
                 />
               </div>
-            )}
+            
           </div>
           
         </>

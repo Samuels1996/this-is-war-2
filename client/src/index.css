@@ -151,3 +151,10 @@ code {
   font-family: "Alkhemikal";
   src: url("./font/Alkhemikal.ttf");
 }
+
+.playersText {
+  color: white;
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
+  font-size: 30px;
+}
