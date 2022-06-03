@@ -20,7 +20,7 @@ export const PlayerStats = () => {
 export const OpponentStats = () => {
     return <div>
         <img src={opponentImg} alt='also fuck this shit' />
-        <div className='fightTextBox'>This is opponent info</div>
+        <div className='fightTextBox'>The Dark Lord</div>
         <div>
             <Health label="HP:" />
         </div>

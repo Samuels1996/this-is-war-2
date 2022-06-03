@@ -13,7 +13,7 @@ export default function Fight() {
             <div className="playerCards">
                 <PlayerStats />
             </div>
-            <div className="playerCards">
+            <div className= "playerCards">
                 <OpponentStats />
             </div>
             <FightOptions 
