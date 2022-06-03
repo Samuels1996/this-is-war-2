@@ -21,6 +21,8 @@ code {
  max-width: 80%;
  margin-left: 12% !important;
  margin-right: auto !important;
+ margin-top: 15vh;
+ margin-bottom: 4rem;
 }
 
 .item-card {
@@ -46,7 +48,7 @@ code {
 .main-style {
   font-family: "Alkhemikal";
   src: url("./font/Alkhemikal.ttf");
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 
 .playerCards {
@@ -73,13 +75,6 @@ code {
   font-size: 40px;
 
   cursor: pointer;
-}
-
-.form-row {
-  background: rgba(245, 245, 245, 0.6);
-  border: black;
-  border-style: solid;
-  height: 70%;
 }
 
 .form-header {
