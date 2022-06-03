@@ -24,7 +24,6 @@ import storeBg from "./images/store-bg.png";
 // Page imports
 import {
   Login,
-  Signup,
   HomePage,
   Fight,
   FightChoose,
