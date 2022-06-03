@@ -18,16 +18,19 @@ export default function Store () {
                     <div>Loading...</div>
                 ) :
                  (
-                   <div className="card-group">
+                   <div className="card-deck">
                     {item.map((item) => {
                       return <div key={item._id} className="card mb-2 item-card">
                         <h3 className="card-header">{item.name}</h3>
-                        <p className="card-text">{item.description} <br />
+                        <p className="card-body">{item.description} <br />
                         {item.price} gold <br />
                         +{item.hp} hp <br />
                         +{item.attack} atk <br />
                         +{item.defense} def <br />
                         </p>
+                        <div className="card-footer">
+                            <button className="btn btn-danger">Buy</button>
+                        </div>
                         
                       </div>
                     })}

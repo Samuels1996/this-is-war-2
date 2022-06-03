@@ -59,6 +59,16 @@ const resolvers = {
       const character = await Character.create(args);
       return character;
     },
+    addItem: async (parent, { userId, itemId }) => {
+      console.log(itemId)
+      console.log(userId)
+      return await User.findByIdAndUpdate(
+        { _id: userId },
+        { $push: { inventory: itemId } },
+        { new: true }
+      )
+
+    }
     // createItem: async (parent, args) => {
     //   const item = await Item.create(args);
     //   return item;
