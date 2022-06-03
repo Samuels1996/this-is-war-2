@@ -15,9 +15,11 @@ import Popper from "popper.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.js";
 import "./App.css";
+
+// Page backgrounds
 import mainBg from "./images/brick-bg.png";
-import castle from "./images/castle.jpg";
 import loginBg from "./images/login-bg.png";
+import storeBg from "./images/store-bg.png";
 
 // Page imports
 import {
@@ -60,7 +62,7 @@ function App() {
 
   const updateBgImage = (sitepath) => {
     if (sitepath === "/store") {
-      return setBgImage(castle);
+      return setBgImage(storeBg);
     } else if (sitepath === "/login") {
       return setBgImage(loginBg);
     } else {
