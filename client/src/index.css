@@ -123,6 +123,7 @@ code {
 
 .opponentImg {
   background-image: url('./images/dungeon-boss.png');
+  justify-content: right;
 }
 
 .playerImg {
@@ -149,4 +150,11 @@ code {
   text-align: center;
   font-family: "Alkhemikal";
   src: url("./font/Alkhemikal.ttf");
+}
+
+.playersText {
+  color: white;
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
+  font-size: 30px;
 }
