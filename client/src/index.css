@@ -48,7 +48,7 @@ code {
 .main-style {
   font-family: "Alkhemikal";
   src: url("./font/Alkhemikal.ttf");
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 
 .playerCards {
@@ -72,13 +72,6 @@ code {
   font-size: 24px;
 
   cursor: pointer;
-}
-
-.form-row {
-  background: rgba(245, 245, 245, 0.6);
-  border: black;
-  border-style: solid;
-  height: 70%;
 }
 
 .form-header {

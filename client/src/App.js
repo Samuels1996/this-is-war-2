@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/MainNav";
 import {
@@ -15,7 +15,9 @@ import Popper from "popper.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.js";
 import "./App.css";
-import background from "./images/brick-bg.png";
+import mainBg from "./images/brick-bg.png";
+import castle from "./images/castle.jpg";
+import loginBg from "./images/login-bg.png";
 
 // Page imports
 import {
@@ -29,6 +31,7 @@ import {
   Store,
   TestPage,
 } from "./components/pages";
+import { useState } from "react";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -53,12 +56,34 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [bgImage, setBgImage] = useState();
+
+  const updateBgImage = (sitepath) => {
+    if (sitepath === "/store") {
+      return setBgImage(castle);
+    } else if (sitepath === "/login") {
+      return setBgImage(loginBg);
+    } else {
+      return setBgImage(mainBg);
+    }
+  };
+
+  useEffect(() => {
+    let pathUrl = window.location.pathname;
+    console.log(pathUrl);
+
+    updateBgImage(pathUrl);
+  });
+
   return (
     <ApolloProvider client={client}>
       <Router>
         <div
           className="site-bg"
-          style={{ backgroundImage: `url(${background})` }}
+          style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: "cover",
+          }}
         >
           <>
             <Navbar />
