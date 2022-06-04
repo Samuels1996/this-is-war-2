@@ -5,29 +5,29 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .main-logo {
- max-width: 80%;
- margin-left: 12% !important;
- margin-right: auto !important;
- margin-top: 15vh;
- margin-bottom: 4rem;
+  max-width: 80%;
+  margin-left: 12% !important;
+  margin-right: auto !important;
+  margin-top: 15vh;
+  margin-bottom: 4rem;
 }
 
 .item-card {
   width: 18em;
-  margin: 1em;
+  /* margin: 1em; */
   min-width: 18em;
 }
 
@@ -35,8 +35,8 @@ code {
   text-decoration: none;
   color: white;
 }
-.no-link:hover{
-  color:#860000;
+.no-link:hover {
+  color: #860000;
 }
 
 .navbar-link-main {
@@ -78,7 +78,7 @@ code {
 }
 
 .form-header {
-  color:#860000;
+  color: #860000;
   text-decoration: underline;
 }
 
@@ -123,11 +123,11 @@ code {
 
 .opponentImg {
   justify-content: right;
-  background-image: url('./images/dungeon-boss.png');
+  background-image: url("./images/dungeon-boss.png");
 }
 
 .playerImg {
-  background-image: url('./images/megaman-thing.png');
+  background-image: url("./images/megaman-thing.png");
 }
 
 .form-style {
@@ -157,4 +157,7 @@ code {
   font-family: "Alkhemikal";
   src: url("./font/Alkhemikal.ttf");
   font-size: 30px;
+}
+.card-deck {
+  display: inline;
 }

@@ -20,14 +20,14 @@ export default function Store() {
   return (
     <div>
       <Link to="/championselect">Select Champion</Link>
-      <div className="col-12">
+      <div className="row">
         {loading ? (
           <div>Loading...</div>
         ) : (
-          <div className="card-deck">
+          <div className="card-deck justify-content-center row">
             {item.map((item) => {
               return (
-                <div key={item._id} className="card mb-2 item-card">
+                <div key={item._id} className="card mb-2 item-card col-3 mx-1">
                   <h3 className="card-header">{item.name}</h3>
                   <p className="card-body">
                     {item.description} <br />

@@ -1,7 +1,7 @@
 //directs to champ select
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ADD_CHARACTER_TO_USER } from "../../utils/mutations";
+import { ADD_CHARACTER_TO_USER, CREATE_CHARACTER } from "../../utils/mutations";
 import { useMutation } from "@apollo/client";
 import AuthService from "../../utils/auth";
 import { useEffect } from "react";
@@ -20,11 +20,13 @@ export default function CreateChampion() {
   const changeshow = (boo) => {
     setShow(boo);
   };
+  const [char, { err }] = useMutation(CREATE_CHARACTER);
   const [user, { error }] = useMutation(ADD_CHARACTER_TO_USER);
   const handleSubmit = async () => {
     const name = document.getElementById("name").value.trim();
     const userId = AuthService.getProfile().data._id;
-    user(userId, { name: name, classType: charType });
+    const charID = char(name, charType);
+    // user(userId, { name: name, classType: charType });
     setCharType("Select type");
     document.getElementById("name").value = "";
   };

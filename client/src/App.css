@@ -39,10 +39,13 @@
 .nav-item {
   font-size: 2rem;
 }
+<<<<<<< HEAD
+=======
 
 /* .nav-bg {
   background-image: url("./images/nav-bg.svg");
 } */
+>>>>>>> 684ccdbb9d7dace2dee22c8466130fb77b7030d7
 .char {
   margin: auto;
   justify-content: center;
