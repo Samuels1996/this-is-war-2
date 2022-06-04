@@ -121,14 +121,14 @@ code {
   text-align: right;
 }
 
-.opponentImg {
+/* .opponentImg {
   justify-content: right;
   background-image: url("./images/dungeon-boss.png");
 }
 
 .playerImg {
   background-image: url("./images/megaman-thing.png");
-}
+} */
 
 .form-style {
   padding: 7rem;
