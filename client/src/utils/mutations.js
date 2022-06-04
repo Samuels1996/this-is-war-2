@@ -37,12 +37,17 @@ export const CREATE_CHARACTER = gql`
 `;
 
 export const ADD_CHARACTER_TO_USER = gql`
-  mutation addCharacterToUser($userId: ID!, $character: character) {
-    addCharacterToUser(userId: $userId, character: $character) {
+  mutation addCharacterToUser(
+    $userId: ID!
+    $name: String!
+    $classType: String!
+  ) {
+    addCharacterToUser(userId: $userId, name: $name, classType: $classType) {
       user {
         userId
         characters {
-          character
+          name
+          classType
         }
       }
     }

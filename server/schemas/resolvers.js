@@ -64,7 +64,11 @@ const resolvers = {
     //   return item;
     // },
     addCharacterToUser: async (parent, args) => {
-      const character = args.character;
+      console.log(args);
+      const character = {
+        name: args.name,
+        classType: args.classType,
+      };
       const userId = args.userId;
       const user = User.find({ userId }).populate(character).exec();
       return user;

@@ -89,7 +89,7 @@ const typeDefs = gql`
     createUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     createCharacter(name: String!, classType: String!): Character
-    addCharacterToUser(userId: ID!, character: CharacterInput!): User
+    addCharacterToUser(userId: ID!, name: String!, classType: String!): User
   }
 `;
 
