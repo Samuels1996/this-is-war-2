@@ -41,8 +41,6 @@ const httpLink = createHttpLink({
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem("id_token");
 
-  console.log(token);
-
   return {
     headers: {
       ...headers,
@@ -71,7 +69,6 @@ function App() {
 
   useEffect(() => {
     let pathUrl = window.location.pathname;
-    console.log(pathUrl);
 
     updateBgImage(pathUrl);
   });
