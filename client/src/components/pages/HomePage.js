@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../index.css";
-import AuthService from "../../utils/auth";
-import mainLogo from "../../images/main-logo.svg";
+import mainLogo from "../../images/main-logo.png";
 import "../Button/Button.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
+
+import AuthService from "../../utils/auth";
 
 export default function HomePage() {
   return (
@@ -21,9 +22,15 @@ export default function HomePage() {
         <Col xs="12">
           <div className="btn-container">
             <div className="pixel2">
-              <Link to="/login" className="no-link">
-                Test your might!
-              </Link>
+              {AuthService.loggedIn() ? (
+                <a href="/championselect" className="no-link">
+                  Test your might!
+                </a>
+              ) : (
+                <a href="/login" className="no-link">
+                  Test your might!
+                </a>
+              )}
             </div>
           </div>
         </Col>

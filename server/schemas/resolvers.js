@@ -60,19 +60,28 @@ const resolvers = {
       return character;
     },
     addItem: async (parent, { userId, itemId }) => {
-      console.log(itemId)
-      console.log(userId)
+      console.log(itemId);
+      console.log(userId);
       return await User.findByIdAndUpdate(
         { _id: userId },
         { $addToSet: { inventory: itemId } },
         { new: true }
-      )
-
-    }
+      );
+    },
     // createItem: async (parent, args) => {
     //   const item = await Item.create(args);
     //   return item;
     // },
+    addCharacterToUser: async (parent, args) => {
+      console.log(args);
+      const character = {
+        name: args.name,
+        classType: args.classType,
+      };
+      const userId = args.userId;
+      const user = User.find({ userId }).populate(character).exec();
+      return user;
+    },
   },
 };
 
