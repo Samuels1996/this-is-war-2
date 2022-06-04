@@ -2,14 +2,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function ChampionSelect () {
-    return (
-        <div>
-            <Link to='/store'>Store</Link>
-            <Link to='/fightchoice'>Choose Fight</Link>
-        </div>
-
-        
-    )
+export default function ChampionSelect() {
+  return (
+    <div>
+      <Link to="/store">Store</Link>
+      <Link to="/fightchoice">Choose Fight</Link>
+      <Link to="/createchampion">Create Champion</Link>
+    </div>
+  );
 }
-

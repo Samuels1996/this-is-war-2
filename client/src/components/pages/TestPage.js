@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { FIND_ITEMS } from "../utils/queries";
+import { FIND_ITEMS, QUERY_USERS } from "../utils/queries";
 
 export default function TestPage() {
-  const { loading, data } = useQuery(FIND_ITEMS);
-  const items = data?.items || [];
-  console.log(items);
+  const { loading, data } = useQuery(QUERY_USERS);
+  console.log(data);
+  const items = data?.users || [];
+
   return (
     <div className="text-light">
       <h1>Pipe data below</h1>
@@ -16,7 +17,7 @@ export default function TestPage() {
         ) : (
           <div>
             {items.map((item) => {
-              return <p>{item.name}</p>;
+              return <p>{item.email}</p>;
             })}
           </div>
         )}
