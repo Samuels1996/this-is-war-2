@@ -6,17 +6,9 @@ import { FIND_ITEMS } from "../utils/queries";
 import { ADD_ITEM } from "../../utils/mutations";
 import auth from "../../utils/auth";
 
-function addItem () {
-    const user = auth.getProfile();
-    const userId = user.data._id
-
-    //const [] = useMutation(ADD_ITEM)
-}
-
 export default function Store () {
     const { loading, data } = useQuery(FIND_ITEMS)
     const item = data?.items || [];
-
 
     return (
         <div>
@@ -37,7 +29,7 @@ export default function Store () {
                         +{item.defense} def <br />
                         </p>
                         <div className="card-footer">
-                            <button onClick={addItem} className="btn btn-danger">Buy</button>
+                            <button className="btn btn-danger">Buy</button>
                         </div>
                         
                       </div>

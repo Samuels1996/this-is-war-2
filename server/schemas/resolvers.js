@@ -64,7 +64,7 @@ const resolvers = {
       console.log(userId)
       return await User.findByIdAndUpdate(
         { _id: userId },
-        { $push: { inventory: itemId } },
+        { $addToSet: { inventory: itemId } },
         { new: true }
       )
 
