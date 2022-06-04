@@ -25,7 +25,17 @@ export default function CreateChampion() {
   const handleSubmit = async () => {
     const name = document.getElementById("name").value.trim();
     const userId = AuthService.getProfile().data._id;
-    const charID = char(name, charType);
+    await setCharacter({
+      name,
+      classType: charType,
+    });
+    try {
+      const charID = await char({
+        variables: { ...character },
+      });
+    } catch (err) {
+      console.log(err);
+    }
     // user(userId, { name: name, classType: charType });
     setCharType("Select type");
     document.getElementById("name").value = "";
