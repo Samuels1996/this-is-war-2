@@ -32,7 +32,7 @@ export default function Fight({ onGameEnd }) {
 
   return (
     <>
-      <div className="row">
+      <div className="row m-4">
         <div className="fightCard">Fight!</div>
         <div className="col-5 m-auto mb-2">
           <PlayerStats
