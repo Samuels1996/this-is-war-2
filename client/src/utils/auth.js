@@ -32,7 +32,7 @@ class AuthService {
 
   newLogin(idToken) {
     localStorage.setItem("id_token", idToken);
-    window.location.assign("/championselect");
+    window.location.assign("/createchampion");
   }
 
   logout() {

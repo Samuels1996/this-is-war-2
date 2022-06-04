@@ -24,14 +24,12 @@ import storeBg from "./images/store-bg.png";
 // Page imports
 import {
   Login,
-  Signup,
   HomePage,
   Fight,
   FightChoose,
   ChampionSelect,
   CreateChampion,
   Store,
-  TestPage,
 } from "./components/pages";
 import { useState } from "react";
 
@@ -88,14 +86,21 @@ function App() {
             <Navbar />
 
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/store" element={<Store />} />
-              <Route path="/championselect" element={<ChampionSelect />} />
-              <Route path="/fight" element={<Fight />} />
-              <Route path="/fightchoice" element={<FightChoose />} />
-              <Route path="/createchampion" element={<CreateChampion />} />
-              <Route path="/testpage" element={<TestPage />} />
+              <Route exact path="/" element={<HomePage />} />
+              <Route exact path="/login" element={<Login />} />
+              <Route exact path="/store" element={<Store />} />
+              <Route
+                exact
+                path="/championselect"
+                element={<ChampionSelect />}
+              />
+              <Route exact path="/fight" element={<Fight />} />
+              <Route exact path="/fightchoice" element={<FightChoose />} />
+              <Route
+                exact
+                path="/createchampion"
+                element={<CreateChampion />}
+              />
             </Routes>
           </>
         </div>

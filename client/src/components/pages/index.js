@@ -6,7 +6,6 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Store from "./Store";
 import FightChoose from "./FightChoose";
-import TestPage from "./ServerTests/TestPage";
 
 export {
   CreateChampion,
@@ -17,5 +16,4 @@ export {
   Signup,
   Store,
   FightChoose,
-  TestPage,
 };
