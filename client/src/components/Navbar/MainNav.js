@@ -13,7 +13,7 @@ const SiteNav = () => {
       <Container>
         <Navbar.Brand href="/">
           <img
-            alt=""
+            alt="This is War 2 small logo"
             src={smLogo}
             width="45"
             className="d-inline-block align-top"
