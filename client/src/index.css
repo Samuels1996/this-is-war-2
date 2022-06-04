@@ -171,7 +171,22 @@ code {
   padding: 1rem;
 }
 
-.store-font{
+.site-font{
   font-family: "Alkhemikal";
   src: url("./font/Alkhemikal.ttf");
+}
+
+.character-img {
+  max-width: 10rem;
+  margin-bottom: 2rem;
+}
+
+.character-creation{
+  margin-top: 5rem;
+  padding: 3rem;
+  background: rgba(245, 245, 245, 0.75);
+  border: black solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -16,7 +16,7 @@ export default function Store() {
   const item = data?.items || [];
 
   return (
-    <div className="row store-font">
+    <div className="row site-font">
       {loading ? (
         <div>Loading...</div>
       ) : (
