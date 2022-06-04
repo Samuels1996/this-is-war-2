@@ -22,7 +22,7 @@ export const playerStats = {
 
 export const attack = ({ attacker, receiver }) => {
   const receivedDamage =
-    attacker.attack - (attacker.level - receiver.level) * 1.25;
+    attacker.attack - (attacker.level - receiver.level) * 2.5;
 
   const finalDamage = receivedDamage - receiver.defense / 2;
 
@@ -30,7 +30,7 @@ export const attack = ({ attacker, receiver }) => {
 };
 export const defend = ({ attacker, receiver }) => {
   const receivedDamage =
-    attacker.defend - (attacker.level - receiver.level) * 1.25;
+    attacker.defend - (attacker.level - receiver.level) * 2.5;
 
   const finalDamage = receivedDamage - receiver.defense / 2;
 

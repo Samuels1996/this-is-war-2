@@ -32,9 +32,9 @@ export default function Fight({ onGameEnd }) {
 
   return (
     <>
-      <div>
+      <div className="row">
         <div className="fightCard">Fight!</div>
-        <div>
+        <div className="col-5 m-auto mb-2">
           <PlayerStats
             health={opponentHealth}
             name={opponentStats.name}
@@ -42,23 +42,16 @@ export default function Fight({ onGameEnd }) {
             maxHealth={opponentStats.maxHealth}
           />
         </div>
-      </div>
 
-      <div>
-        {/* <div>
-            {playerStats.name} vs {opponentStats.name}
-          </div> */}
+        <div className="col-5 m-auto mb-2">
+          <OpponentStats
+            health={playerHealth}
+            name={playerStats.name}
+            level={playerStats.level}
+            maxHealth={playerStats.maxHealth}
+          />
+        </div>
       </div>
-
-      <div>
-        <OpponentStats
-          health={playerHealth}
-          name={playerStats.name}
-          level={playerStats.level}
-          maxHealth={playerStats.maxHealth}
-        />
-      </div>
-
       <div>
         {/* {!inSequence && turn === 0 && ( */}
         <div>
