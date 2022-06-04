@@ -1,8 +1,16 @@
 //directs to champ select
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ADD_CHARACTER_TO_USER } from "../../utils/mutations";
+import { useMutation } from "@apollo/client";
+import AuthService from "../../utils/auth";
+import { useEffect } from "react";
 
 export default function CreateChampion() {
+  const [character, setCharacter] = useState({
+    name: "",
+    classType: "",
+  });
   const [charType, setCharType] = useState("Select type");
   const changeType = (str) => {
     setCharType(str);
@@ -12,17 +20,34 @@ export default function CreateChampion() {
   const changeshow = (boo) => {
     setShow(boo);
   };
+  const [user, { error }] = useMutation(ADD_CHARACTER_TO_USER);
+  const handleSubmit = async () => {
+    const name = document.getElementById("name").value.trim();
+    const userId = AuthService.getProfile().data._id;
+    user(userId, { name: name, classType: charType });
+    setCharType("Select type");
+    document.getElementById("name").value = "";
+  };
+  const characterImg = () => {
+    if (charType === "Wizard") {
+      return <img src="" alt="Wizard Avatar" />;
+    } else if (charType === "Archer") {
+      return <img src="" alt="Archer Avatar" />;
+    } else {
+      return <img src="" alt="Warrior Avatar" />;
+    }
+  };
   return (
-    <div>
+    <div className="row">
       <div>
         <Link to="/championselect">Champion Select</Link>
       </div>
-      <div>
+      <div className="char">
         <h2>Character Creation</h2>
-        <form action="">
+        <form action="" className="">
           <label htmlFor="">Name</label>
-          <input type="text" placeholder="Character Name" />
-          <div className="dropdown">
+          <input type="text" placeholder="Character Name" id="name" />
+          <div className="dropdown my-2">
             <a
               className="btn btn-secondary dropdown-toggle"
               href="#"
@@ -41,32 +66,48 @@ export default function CreateChampion() {
                   className="dropdown-item"
                   onClick={(e) => {
                     e.preventDefault();
-                    changeType("Action");
+                    changeType("Wizard");
                   }}
                 >
-                  Action
+                  Wizard
                 </button>
               </li>
               <li>
                 <button
                   className="dropdown-item"
-                  onClick={() => changeType("2")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    changeType("Archer");
+                  }}
                 >
-                  Another action
+                  Archer
                 </button>
               </li>
               <li>
                 <button
                   className="dropdown-item"
-                  onClick={() => changeType("3")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    changeType("Warrior");
+                  }}
                 >
-                  Something else here
+                  Warrior
                 </button>
               </li>
             </ul>
           </div>
+          <button
+            className="btn btn-primary"
+            onClick={(e) => {
+              e.preventDefault();
+              handleSubmit();
+            }}
+          >
+            submit
+          </button>
         </form>
       </div>
+      <div>{characterImg()}</div>
     </div>
   );
 }
