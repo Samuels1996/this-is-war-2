@@ -16,32 +16,30 @@ export default function Store() {
   const item = data?.items || [];
 
   return (
-    <div className="container">
-      <div className="row">
-        {loading ? (
-          <div>Loading...</div>
-        ) : (
-          <div className="card-group">
-            {item.map((item) => {
-              return (
-                <div key={item._id} className="card mb-2 item-card">
-                  <h3 className="card-header">{item.name}</h3>
-                  <p className="card-body">
-                    {item.description} <br />
-                    {item.price} gold <br />+{item.hp} hp <br />+{item.attack}{" "}
-                    atk <br />+{item.defense} def <br />
-                  </p>
-                  <div className="card-footer">
-                    <button onClick={addItem} className="btn btn-danger">
-                      Buy
-                    </button>
-                  </div>
+    <div className="row">
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className="card-deck justify-content-center row">
+          {item.map((item) => {
+            return (
+              <div key={item._id} className="card mb-2 item-card col-3 mx-1">
+                <h3 className="card-header">{item.name}</h3>
+                <p className="card-body">
+                  {item.description} <br />
+                  {item.price} gold <br />+{item.hp} hp <br />+{item.attack} atk{" "}
+                  <br />+{item.defense} def <br />
+                </p>
+                <div className="card-footer">
+                  <button onClick={addItem} className="btn btn-danger">
+                    Buy
+                  </button>
                 </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
