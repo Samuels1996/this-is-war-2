@@ -46,5 +46,17 @@
     "exp": "0",
     "active": false,
     "boss": false
+  },
+  {
+    "name": "Gorp",
+    "equipment": [],
+    "level": "1",
+    "classType": "Barbarian",
+    "hp": "150",
+    "attack": "30",
+    "defense": "20",
+    "exp": "0",
+    "active": false,
+    "boss": false
   }
 ]
