@@ -23,7 +23,7 @@ export default function HomePage() {
           <div className="btn-container">
             <div className="pixel2">
               {AuthService.loggedIn() ? (
-                <a href="/championselect" className="no-link">
+                <a href="/fightchoice" className="no-link">
                   Test your might!
                 </a>
               ) : (
