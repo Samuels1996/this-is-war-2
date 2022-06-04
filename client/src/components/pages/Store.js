@@ -27,7 +27,7 @@ export default function Store() {
                 key={item._id}
                 className="card mt-3 mb-2 item-card col-3 mx-2 bg-secondary text-white"
               >
-                <h3 className="card-header">{item.name}</h3>
+                <h3 className="card-header card-body-text">{item.name}</h3>
                 <p className="card-body card-body-text">
                   {item.description} <br />
                   {item.price} gold <br />+{item.hp} hp <br />+{item.attack} atk{" "}
@@ -35,7 +35,7 @@ export default function Store() {
                 </p>
                 <div className="card-footer">
                   <button onClick={addItem} className="btn btn-danger">
-                    Buy
+                    <span className="card-body-text">Buy</span>
                   </button>
                 </div>
               </div>
