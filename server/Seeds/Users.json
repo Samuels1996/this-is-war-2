@@ -22,7 +22,12 @@
   {
     "username": "Mako",
     "email": "mako@thisiswar.com",
-    "password": "password2"
+    "password": "password2",
+    "wealth": "1000000000",
+    "characters": [],
+    "inventory": [],
+    "wins": "1001",
+    "losses": "0"
   },
   {
     "username": "Colin",
