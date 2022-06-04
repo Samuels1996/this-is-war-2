@@ -47,14 +47,6 @@ export default function Fight({onGameEnd}) {
             />
           </div>
         </div>
-  
-        <div>
-          {/* <div>
-            {playerStats.name} vs {opponentStats.name}
-          </div> */}
-        </div>
-  
-        
           <div>
             <OpponentStats
               health={playerHealth}
