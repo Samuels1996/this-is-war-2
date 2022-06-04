@@ -31,3 +31,16 @@ export const FIND_USERS = gql`
     }
   }
 `;
+
+export const FIND_CHARACTERS = gql `
+query allCharacters {
+  characters {
+    _id
+    name
+    boss
+    hp
+    attack
+    defense
+  }
+}
+`;
