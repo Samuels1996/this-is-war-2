@@ -7,6 +7,7 @@ import { FIND_CHARACTERS } from "../utils/queries";
 export default function ChampionSelect() {
   const { loading, data } = useQuery(FIND_CHARACTERS);
   const char = data?.characters || [];
+  console.log(char)
   return (
     <div>
       <Link to="/store">Store</Link>
@@ -17,10 +18,10 @@ export default function ChampionSelect() {
         {loading ? (
           <div>Loading...</div>
         ) : (
-          <div className="card-deck">
+          <div className="card-deck justify-content-center row">
             {char.map((char) => {
               if(char.boss === false){
-                return( <div key={char._id} className="card item-card mb-2">
+                return( <div key={char._id} className="card item-card mb-2 col-3 mx-1">
                   <h2 className="card-header">{char.name}</h2>
                   <p className="card-body">{char.hp} hp<br />
                   {char.attack} atk <br />
