@@ -70,7 +70,6 @@ function App() {
 
   useEffect(() => {
     let pathUrl = window.location.pathname;
-    console.log(pathUrl);
 
     updateBgImage(pathUrl);
   });
