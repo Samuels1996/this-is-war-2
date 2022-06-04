@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import smLogo from "../../images/sm-logo.svg";
+import smLogo from "../../images/sm-logo.png";
 import LogInNav from "./NavTypes/LogInNav";
 import LogOutNav from "./NavTypes/LogOutNav";
 

@@ -90,6 +90,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     createCharacter(name: String!, classType: String!): Character
     addCharacterToUser(userId: ID!, name: String!, classType: String!): User
+    addItem(userId: ID!, itemId: ID!): User
   }
 `;
 

@@ -1,6 +1,6 @@
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 
-export const opponentMoves = turn => {
+export default function OpponentMoves({turn}) {
     const [aiChoice, setAiChoice] = useState('');
 
     useEffect(() => {

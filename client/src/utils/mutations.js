@@ -53,3 +53,13 @@ export const ADD_CHARACTER_TO_USER = gql`
     }
   }
 `;
+export const ADD_ITEM = gql`
+  mutation AddItem($userId: ID!, $itemId: ID!) {
+    addItem(userId: $userId, itemId: $itemId) {
+      _id
+      inventory {
+        _id
+      }
+    }
+  }
+`;
