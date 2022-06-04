@@ -170,3 +170,8 @@ code {
 .card-img{
   padding: 1rem;
 }
+
+.store-font{
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
+}

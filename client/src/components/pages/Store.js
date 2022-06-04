@@ -16,16 +16,19 @@ export default function Store() {
   const item = data?.items || [];
 
   return (
-    <div className="row">
+    <div className="row store-font">
       {loading ? (
         <div>Loading...</div>
       ) : (
         <div className="card-deck justify-content-center row">
           {item.map((item) => {
             return (
-              <div key={item._id} className="card mb-2 item-card col-3 mx-1">
+              <div
+                key={item._id}
+                className="card mt-3 mb-2 item-card col-3 mx-2 bg-secondary text-white"
+              >
                 <h3 className="card-header">{item.name}</h3>
-                <p className="card-body">
+                <p className="card-body card-body-text">
                   {item.description} <br />
                   {item.price} gold <br />+{item.hp} hp <br />+{item.attack} atk{" "}
                   <br />+{item.defense} def <br />
