@@ -122,8 +122,8 @@ code {
 }
 
 .opponentImg {
-  background-image: url("./images/dungeon-boss.png");
   justify-content: right;
+  background-image: url("./images/dungeon-boss.png");
 }
 
 .playerImg {
