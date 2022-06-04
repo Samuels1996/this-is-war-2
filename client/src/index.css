@@ -121,15 +121,6 @@ code {
   text-align: right;
 }
 
-/* .opponentImg {
-  justify-content: right;
-  background-image: url("./images/dungeon-boss.png");
-}
-
-.playerImg {
-  background-image: url("./images/megaman-thing.png");
-} */
-
 .form-style {
   padding: 7rem;
   font-size: 150%;
@@ -160,4 +151,22 @@ code {
 }
 .card-deck {
   display: inline;
+}
+
+.fight-choice {
+  font-family: "Alkhemikal";
+  src: url("./font/Alkhemikal.ttf");
+  margin-top: 6rem;
+}
+
+.card-title {
+  font-size: 3rem;
+}
+
+.card-body-text {
+  font-size: 2rem;
+}
+
+.card-img{
+  padding: 1rem;
 }

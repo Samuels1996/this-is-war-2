@@ -30,7 +30,6 @@ import {
   ChampionSelect,
   CreateChampion,
   Store,
-  TestPage,
 } from "./components/pages";
 import { useState } from "react";
 
@@ -102,7 +101,6 @@ function App() {
                 path="/createchampion"
                 element={<CreateChampion />}
               />
-              <Route exact path="/testpage" element={<TestPage />} />
             </Routes>
           </>
         </div>
