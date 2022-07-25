@@ -7,7 +7,7 @@ export const playerStats = {
   };
   export const opponentStats = {
     level: 50,
-    name: 'The DaRK Lord',
+    name: 'The Dark Lord',
     maxHealth: 200,
     attack: 32,
     defense: 20,
